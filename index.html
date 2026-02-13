@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JL - Personal Trainer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Personal<span>Juan Lucas</span></h2>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">SEU PERSONAL TRAINER</span>
+            <h1>Transforme seu corpo,<br>transforme sua vida</h1>
+            <p>Treinos e Mentorias personalizados para alcançar seus objetivos com resultados reais</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Começar Agora</a>
+                <a href="#services" class="btn btn-secondary">Conhecer Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.jpg" alt="Personal Trainer" onerror="this.src='https://via.placeholder.com/600x700?text=Foto+do+Personal'">
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-subtitle">QUEM SOU EU</span>
+                    <h2>Juan Lucas - Personal Trainer</h2>
+                    <p class="about-description">Trabalho ajudando pessoas a alcançarem seus objetivos fitness com metodologia exclusiva e acompanhamento personalizado.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Certificações e Parcerias</h4>
+                                <p>Bacharel e Licenciado em Ed. Física | Unesp, Pós Graduado Biomecânica</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <h4>+100 Alunos</h4>
+                                <p>Transformações realizadas</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>1 Ano</h4>
+                                <p>De experiência no mercado</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Alunos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfação</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Projetos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">O QUE EU FAÇO</span>
+                <h2>Serviços Especializados</h2>
+                <p>Metodologia exclusiva adaptada às suas necessidades e objetivos</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Musculação</h3>
+                    <p>Treinos personalizados para hipertrofia, definição e força muscular com acompanhamento individual</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Avaliação física completa</li>
+                        <li><i class="fas fa-check"></i> Periodização de treino</li>
+                        <li><i class="fas fa-check"></i> Correção de execução</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Funcional</h3>
+                    <p>Treino funcional para melhorar condicionamento, equilíbrio e qualidade de vida</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Exercícios dinâmicos</li>
+                        <li><i class="fas fa-check"></i> Core e estabilidade</li>
+                        <li><i class="fas fa-check"></i> Mobilidade articular</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3>Mentoria de Atletas</h3>
+                    <p>Acompanhamento profissional com treinos destinados a atletas de alto desempenho</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Plano alimentar</li>
+                        <li><i class="fas fa-check"></i> Suplementação</li>
+                        <li><i class="fas fa-check"></i> Roteiro de treinamento</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>High Performance</h3>
+                    <p>Preparação física para atletas e competições com foco em performance</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Periodização avançada</li>
+                        <li><i class="fas fa-check"></i> Treino específico</li>
+                        <li><i class="fas fa-check"></i> Acompanhamento competitivo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">DEPOIMENTOS</span>
+                <h2>Meus alunos, se tornaram meus amigos. E o que eles dizem sobre minha atuação como personal trainer</h2>
+                <p>Histórias reais de transformação e superação</p>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Juan é meu amigo a muitos anos e sempre acreditei no seu potencial, hoje ele me ajudou a superar minhas limitações e alcançar metas que antes eram impossíveis."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Cliente">
+                        <div>
+                            <h4>Leandro P</h4>
+                            <p>Aluna há 1 ano</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Profissional extremamente dedicado e competente. Consegui sair do sedentarismo e hoje faço meus treinos com prazer. Recomendo demais!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Cliente">
+                        <div>
+                            <h4>Gabrie P</h4>
+                            <p>Aluno há 5 meses</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Melhor personal que já tive! Além do treino personalizado, sempre está atento à execução dos exercícios e me motiva a dar o meu melhor."</p>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Cliente">
+                        <div>
+                            <h4>João M</h4>
+                            <p>Aluno há 4 meses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-section">
+                <h3>Deixe seu depoimento</h3>
+                <form id="commentForm" class="comment-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Seu nome" required>
+                        <input type="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="rating-select">
+                        <span>Avaliação:</span>
+                        <div class="stars-input">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                    <textarea placeholder="Escreva seu depoimento..." rows="4" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Depoimento</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-subtitle">CONTATO</span>
+                    <h2>Vamos começar sua transformação?</h2>
+                    <p>Entre em contato para uma avaliação gratuita e conheça meu método de treinamento</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>(19) 98315-6264</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p>contato@personaljuanlucas.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Local de Atendimento</h4>
+                                <p>Online ou Academia de sua preferencia</p>
+                                <p>Piracicaba, SP</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envie uma mensagem</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu e-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Seu telefone">
+                        </div>
+                        <div class="form-group">
+                            <select>
+                                <option value="">Selecione o serviço de interesse</option>
+                                <option value="musculacao">Musculação</option>
+                                <option value="funcional">Funcional</option>
+                                <option value="nutricao">Mentoria de Atletas</option>
+                                <option value="performance">High Performance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>Personal<span>Juan Lucas</span></h2>
+                    <p>Transformando vidas através do movimento e da saúde</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#testimonials">Depoimentos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Horários</h4>
+                    <ul>
+                        <li>Contato direto por 24hrs</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Personal Juan Lucas. Todos os direitos reservados.</p>
+                <p>Desenvolvido com <i class="fas fa-heart"></i> para seu melhor desempenho</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
