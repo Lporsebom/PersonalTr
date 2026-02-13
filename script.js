@@ -15,86 +15,140 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     });
 });
 
-// Sistema de avaliação por estrelas
-const stars = document.querySelectorAll('.stars-input i');
-let currentRating = 0;
+// Sistema de avaliação por estrelas (VERSÃO ANTIGA - VOU SUBSTITUIR)
+// ============================================
+// FORMSPREE - SISTEMA DE ESTRELAS ATUALIZADO
+// ============================================
 
-stars.forEach(star => {
-    // Hover effect
-    star.addEventListener('mouseenter', function() {
-        const rating = parseInt(this.getAttribute('data-rating'));
-        highlightStars(rating);
-    });
+const starsInput = document.querySelectorAll('.stars-input i');
+const ratingHidden = document.getElementById('rating-value');
 
-    star.addEventListener('mouseleave', function() {
-        highlightStars(currentRating);
-    });
+if (starsInput.length > 0 && ratingHidden) {
+    starsInput.forEach((star, index, stars) => {
+        // Click na estrela
+        star.addEventListener('click', function() {
+            const rating = this.getAttribute('data-rating');
+            ratingHidden.value = rating;
+            
+            stars.forEach((s, i) => {
+                if (i < rating) {
+                    s.classList.remove('far');
+                    s.classList.add('fas');
+                } else {
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                }
+            });
+        });
 
-    // Click event
-    star.addEventListener('click', function() {
-        currentRating = parseInt(this.getAttribute('data-rating'));
-        highlightStars(currentRating);
-    });
-});
+        star.addEventListener('mouseenter', function() {
+            const rating = this.getAttribute('data-rating');
+            stars.forEach((s, i) => {
+                if (i < rating) {
+                    s.classList.remove('far');
+                    s.classList.add('fas');
+                }
+            });
+        });
 
-function highlightStars(rating) {
-    stars.forEach(star => {
-        const starRating = parseInt(star.getAttribute('data-rating'));
-        if (starRating <= rating) {
-            star.classList.remove('far');
-            star.classList.add('fas', 'active');
-        } else {
-            star.classList.remove('fas', 'active');
-            star.classList.add('far');
-        }
+        star.addEventListener('mouseleave', function() {
+            const currentRating = ratingHidden.value;
+            stars.forEach((s, i) => {
+                if (i < currentRating) {
+                    s.classList.remove('far');
+                    s.classList.add('fas');
+                } else {
+                    s.classList.remove('fas');
+                    s.classList.add('far');
+                }
+            });
+        });
     });
 }
 
-// Formulário de comentários
-const commentForm = document.getElementById('commentForm');
-if (commentForm) {
-    commentForm.addEventListener('submit', function(e) {
+// ============================================
+// FORMULÁRIO DE CONTATO - FORMSPREE
+// ============================================
+
+const contactFormSpree = document.getElementById('contactForm');
+if (contactFormSpree) {
+    contactFormSpree.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Coletar dados do formulário
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const comment = this.querySelector('textarea').value;
-        const rating = currentRating;
+        const formData = new FormData(this);
         
-        if (rating === 0) {
-            alert('Por favor, selecione uma avaliação com estrelas!');
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('✅ Mensagem enviada com sucesso! Entrarei em contato em breve.');
+                this.reset();
+            } else {
+                alert('❌ Erro ao enviar. Tente novamente ou me chame no WhatsApp!');
+            }
+        })
+        .catch(error => {
+            alert('❌ Erro de conexão. Me chame direto no WhatsApp!');
+        });
+        
+        return false;
+    });
+}
+
+// ============================================
+// FORMULÁRIO DE DEPOIMENTOS - FORMSPREE
+// ============================================
+
+const commentFormSpree = document.getElementById('commentForm');
+if (commentFormSpree) {
+    commentFormSpree.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const rating = document.getElementById('rating-value').value;
+        if (rating === '0') {
+            alert('⭐ Por favor, selecione uma avaliação com estrelas!');
             return;
         }
         
-        // Simular envio
-        alert(`Obrigado pelo seu depoimento, ${name}! Sua avaliação de ${rating} estrelas será analisada e publicada em breve.`);
+        const formData = new FormData(this);
         
-        // Resetar formulário
-        this.reset();
-        currentRating = 0;
-        highlightStars(0);
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('⭐ Obrigado pelo seu depoimento! Ele será publicado em breve.');
+                this.reset();
+                document.getElementById('rating-value').value = '0';
+                document.querySelectorAll('.stars-input i').forEach(star => {
+                    star.classList.remove('fas');
+                    star.classList.add('far');
+                });
+            } else {
+                alert('❌ Erro ao enviar depoimento. Tente novamente!');
+            }
+        })
+        .catch(error => {
+            alert('❌ Erro de conexão. Tente novamente!');
+        });
+        
+        return false;
     });
 }
 
-// Formulário de contato
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Coletar dados
-        const name = this.querySelector('input[type="text"]').value;
-        
-        // Simular envio
-        alert(`${name}, sua mensagem foi enviada com sucesso! Entrarei em contato em breve.`);
-        
-        // Resetar formulário
-        this.reset();
-    });
-}
+// ============================================
+// SMOOTH SCROLL
+// ============================================
 
-// Smooth scroll para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -109,19 +163,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Header scroll effect
+// ============================================
+// HEADER SCROLL EFFECT
+// ============================================
+
 window.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        header.style.background = 'rgba(26, 30, 36, 0.98)';
+        header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.2)';
     } else {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
+        header.style.background = 'rgba(26, 30, 36, 0.98)';
         header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     }
 });
 
-// Animação de contagem dos números
+// ============================================
+// ANIMAÇÃO DOS NÚMEROS
+// ============================================
+
 function animateNumbers() {
     const stats = document.querySelectorAll('.stat-number');
     
@@ -152,7 +212,6 @@ function animateNumbers() {
             }
         };
         
-        // Observar quando o elemento entra na viewport
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -166,5 +225,5 @@ function animateNumbers() {
     });
 }
 
-// Iniciar animação quando a página carregar
+// Iniciar animação
 window.addEventListener('load', animateNumbers);
