@@ -120,24 +120,6 @@
                         <li><i class="fas fa-check"></i> Correção de execução</li>
                     </ul>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                        <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Exercícios dinâmicos</li>
-                        <li><i class="fas fa-check"></i> Core e estabilidade</li>
-                        <li><i class="fas fa-check"></i> Mobilidade articular</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    
-
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-bolt"></i>
@@ -235,27 +217,52 @@
             </div>
         </div>
 
-            <!-- Comment Form -->
-<form id="commentForm" action="https://formspree.io/f/xbdagkvl" method="POST">
-    <div class="form-row">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
-    </div>
-    <div class="rating-select">
-        <span>Avaliação:</span>
-        <div class="stars-input">
-            <!-- Input hidden para guardar a avaliação -->
-            <input type="hidden" name="avaliacao" id="rating-value" value="0">
-            <i class="far fa-star" data-rating="1"></i>
-            <i class="far fa-star" data-rating="2"></i>
-            <i class="far fa-star" data-rating="3"></i>
-            <i class="far fa-star" data-rating="4"></i>
-            <i class="far fa-star" data-rating="5"></i>
+<!-- Comment Section - NOVO LAYOUT -->
+<section class="comment-section-modern">
+    <div class="container">
+        <div class="comment-wrapper">
+            <div class="comment-header">
+                <span class="section-subtitle">COMPARTILHE SUA EXPERIÊNCIA</span>
+                <h2>Deixe seu depoimento</h2>
+                <p>Sua opinião é muito importante para mim e para quem busca resultados</p>
+            </div>
+            
+            <form id="commentForm" action="https://formspree.io/f/xbdagkvl" method="POST" class="comment-form-modern">
+                <div class="form-row-modern">
+                    <div class="form-group-modern">
+                        <label for="nome"><i class="fas fa-user"></i> Seu nome</label>
+                        <input type="text" name="nome" id="nome" placeholder="Ex: João Silva" required>
+                    </div>
+                    <div class="form-group-modern">
+                        <label for="email"><i class="fas fa-envelope"></i> Seu e-mail</label>
+                        <input type="email" name="email" id="email" placeholder="Ex: joao@email.com" required>
+                    </div>
+                </div>
+                
+                <div class="rating-group-modern">
+                    <label><i class="fas fa-star"></i> Sua avaliação</label>
+                    <div class="stars-input-modern">
+                        <input type="hidden" name="avaliacao" id="rating-value" value="0">
+                        <i class="far fa-star" data-rating="1"></i>
+                        <i class="far fa-star" data-rating="2"></i>
+                        <i class="far fa-star" data-rating="3"></i>
+                        <i class="far fa-star" data-rating="4"></i>
+                        <i class="far fa-star" data-rating="5"></i>
+                    </div>
+                </div>
+                
+                <div class="form-group-modern">
+                    <label for="depoimento"><i class="fas fa-comment"></i> Seu depoimento</label>
+                    <textarea name="depoimento" id="depoimento" placeholder="Conte como foi sua experiência com meus treinos..." rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-submit-modern">
+                    <i class="fas fa-paper-plane"></i> Enviar Depoimento
+                </button>
+            </form>
         </div>
     </div>
-    <textarea name="depoimento" placeholder="Escreva seu depoimento..." rows="4" required></textarea>
-    <button type="submit" class="btn btn-primary">Enviar Depoimento</button>
-</form>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
