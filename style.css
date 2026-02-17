@@ -1582,7 +1582,7 @@ body {
 }
 
 /* ============================================ */
-/* REDES SOCIAIS - CARDS MÉDIOS (4 por linha)   */
+/* REDES SOCIAIS - CARDS LIMPOS (SEM ESTATÍSTICAS) */
 /* ============================================ */
 .social-premium {
     padding: 80px 0;
@@ -1609,6 +1609,7 @@ body {
     margin-top: 40px;
 }
 
+/* Card base */
 .social-premium-card {
     background: rgba(20, 20, 20, 0.95);
     backdrop-filter: blur(10px);
@@ -1622,20 +1623,37 @@ body {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
-.social-premium-card.featured {
-    border: 2px solid #ef4444;
-    box-shadow: 0 10px 20px rgba(239,68,68,0.2);
+.social-premium-card:hover {
+    transform: translateY(-8px);
+    border-color: #ef4444;
+    box-shadow: 0 15px 30px rgba(239,68,68,0.25);
+}
+
+/* Card WhatsApp em destaque (primeiro) */
+.social-premium-card.whatsapp.featured {
+    border: 2px solid #25d366;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
     position: relative;
 }
 
-.social-premium-card.featured .featured-tag {
+.social-premium-card.whatsapp.featured .social-premium-icon {
+    background: linear-gradient(135deg, #25d366, #128C7E);
+}
+
+.social-premium-card.whatsapp.featured .social-badge {
+    color: #25d366;
+    border-color: rgba(37, 211, 102, 0.3);
+    background: rgba(37, 211, 102, 0.1);
+}
+
+.social-premium-card.whatsapp.featured .featured-tag {
     position: absolute;
     top: 10px;
     right: 10px;
-    background: #ef4444;
+    background: #25d366;
     color: white;
     padding: 4px 10px;
     border-radius: 20px;
@@ -1645,12 +1663,12 @@ body {
     z-index: 3;
 }
 
-.social-premium-card:hover {
-    transform: translateY(-8px);
-    border-color: #ef4444;
-    box-shadow: 0 15px 30px rgba(239,68,68,0.25);
+.social-premium-card.whatsapp.featured:hover {
+    background: linear-gradient(135deg, #25d366, #128C7E);
+    border-color: #25d366;
 }
 
+/* Header do card */
 .social-premium-header {
     display: flex;
     align-items: center;
@@ -1660,10 +1678,10 @@ body {
 }
 
 .social-premium-icon {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background: linear-gradient(135deg, #ef4444, #dc2626);
-    border-radius: 12px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1671,114 +1689,95 @@ body {
 }
 
 .social-premium-card:hover .social-premium-icon {
-    transform: scale(1.05) rotate(3deg);
-    box-shadow: 0 0 20px #ef4444;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 25px #ef4444;
 }
 
 .social-premium-icon i {
-    font-size: 24px;
+    font-size: 28px;
     color: white;
 }
 
+.social-premium-info {
+    flex: 1;
+}
+
 .social-premium-info h3 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
     color: white;
 }
 
 .social-handle {
-    font-size: 12px;
+    font-size: 13px;
     color: #ef4444;
     font-weight: 500;
 }
 
 .social-badge {
-    margin-left: auto;
     background: rgba(239,68,68,0.15);
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 10px;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 11px;
     font-weight: 600;
     color: #ef4444;
     border: 1px solid rgba(239,68,68,0.3);
     white-space: nowrap;
 }
 
+/* Preview de conteúdo */
 .social-preview {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
     position: relative;
     z-index: 2;
-    background: rgba(10,10,10,0.4);
-    padding: 12px 10px;
+    background: rgba(10,10,10,0.5);
+    padding: 15px 12px;
     border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .preview-item {
     flex: 1;
-    min-width: 50px;
+    min-width: 70px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-    padding: 8px 5px;
+    gap: 6px;
+    padding: 10px 5px;
     background: rgba(0,0,0,0.3);
-    border-radius: 10px;
+    border-radius: 12px;
     transition: all 0.3s;
 }
 
 .preview-item i {
-    font-size: 16px;
+    font-size: 18px;
     color: #ef4444;
 }
 
 .preview-item span {
-    font-size: 10px;
+    font-size: 11px;
     color: #e0e0e0;
     text-align: center;
+    font-weight: 400;
 }
 
-.social-stats {
-    display: flex;
-    justify-content: space-around;
-    padding: 12px 0;
-    border-top: 1px solid rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    position: relative;
-    z-index: 2;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-item strong {
-    display: block;
-    font-size: 16px;
-    font-weight: 700;
-    color: #ef4444;
-    margin-bottom: 2px;
-}
-
-.stat-item span {
-    font-size: 10px;
-    color: #a0a0a0;
-}
-
+/* Ação do card */
 .social-action {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 8px 0 0;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 0 5px;
     position: relative;
     z-index: 2;
+    border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .social-action span {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: #fff;
 }
@@ -1790,10 +1789,10 @@ body {
 }
 
 .social-premium-card:hover .social-action i {
-    transform: translateX(5px);
+    transform: translateX(8px);
 }
 
-/* Cores específicas no hover - mantendo o mesmo padrão */
+/* Cores específicas no hover (mantendo identidade das marcas) */
 .social-premium-card.instagram:hover {
     background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcaf45);
 }
@@ -1807,11 +1806,11 @@ body {
 }
 
 .social-premium-card.whatsapp:hover {
-    background: linear-gradient(135deg, #25d366, #128C7E);
+    background: linear-gradient(135deg, #25d366, #128C7E) !important;
 }
 
+/* Efeitos hover nos textos */
 .social-premium-card:hover .social-premium-info h3,
-.social-premium-card:hover .stat-item strong,
 .social-premium-card:hover .social-action span {
     color: white;
 }
@@ -1828,7 +1827,12 @@ body {
 }
 
 .social-premium-card:hover .preview-item {
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
+}
+
+.social-premium-card:hover .social-handle {
+    color: white;
+    opacity: 0.9;
 }
 
 /* Responsividade */
@@ -1845,17 +1849,84 @@ body {
     .social-premium-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
+        margin: 40px auto 0;
     }
     
     .social-premium-card {
         padding: 20px;
     }
     
-    .social-premium-card.featured .featured-tag {
+    .social-premium-card.whatsapp.featured .featured-tag {
         top: 8px;
         right: 8px;
         font-size: 9px;
         padding: 3px 8px;
+    }
+    
+    .preview-item {
+        min-width: 60px;
+    }
+    
+    .social-premium-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .social-premium-icon i {
+        font-size: 24px;
+    }
+    
+    .social-premium-info h3 {
+        font-size: 18px;
+    }
+    
+    .social-handle {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-premium-card {
+        padding: 18px 15px;
+    }
+    
+    .social-premium-header {
+        gap: 8px;
+    }
+    
+    .social-badge {
+        padding: 4px 8px;
+        font-size: 10px;
+    }
+    
+    .preview-item {
+        min-width: 50px;
+        padding: 8px 3px;
+    }
+    
+    .preview-item i {
+        font-size: 16px;
+    }
+    
+    .preview-item span {
+        font-size: 10px;
+    }
+    
+    .social-action span {
+        font-size: 13px;
+    }
+}
+
+/* Animações necessárias */
+@keyframes gradientFlow {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(5deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
     }
 }
 /* CORREÇÕES GERAIS DE VERMELHO - REMOVER SUJEIRA */
