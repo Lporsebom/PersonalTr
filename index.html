@@ -216,52 +216,7 @@
         </div>
     </section>
 
-    <!-- Comment Section - NOVO LAYOUT -->
-    <section class="comment-section-modern">
-        <div class="container">
-            <div class="comment-wrapper">
-                <div class="comment-header">
-                    <span class="section-subtitle">COMPARTILHE SUA EXPERIÊNCIA</span>
-                    <h2>Deixe seu depoimento</h2>
-                    <p>Sua opinião é muito importante para mim e para quem busca resultados</p>
-                </div>
-                
-                <form id="commentForm" action="https://formspree.io/f/xbdagkvl" method="POST" class="comment-form-modern">
-                    <div class="form-row-modern">
-                        <div class="form-group-modern">
-                            <label for="nome"><i class="fas fa-user"></i> Seu nome</label>
-                            <input type="text" name="nome" id="nome" placeholder="Ex: João Silva" required>
-                        </div>
-                        <div class="form-group-modern">
-                            <label for="email"><i class="fas fa-envelope"></i> Seu e-mail</label>
-                            <input type="email" name="email" id="email" placeholder="Ex: joao@email.com" required>
-                        </div>
-                    </div>
-                    
-                    <div class="rating-group-modern">
-                        <label><i class="fas fa-star"></i> Sua avaliação</label>
-                        <div class="stars-input-modern">
-                            <input type="hidden" name="avaliacao" id="rating-value" value="0">
-                            <i class="far fa-star" data-rating="1"></i>
-                            <i class="far fa-star" data-rating="2"></i>
-                            <i class="far fa-star" data-rating="3"></i>
-                            <i class="far fa-star" data-rating="4"></i>
-                            <i class="far fa-star" data-rating="5"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group-modern">
-                        <label for="depoimento"><i class="fas fa-comment"></i> Seu depoimento</label>
-                        <textarea name="depoimento" id="depoimento" placeholder="Conte como foi sua experiência com meus treinos..." rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-submit-modern">
-                        <i class="fas fa-paper-plane"></i> Enviar Depoimento
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+       <!-- Comment Section - REMOVIDA -->
 
     <!-- REDES SOCIAIS - CARDS INTERATIVOS PREMIUM -->
     <section class="social-premium">
@@ -273,6 +228,41 @@
             </div>
 
             <div class="social-premium-grid">
+                <!-- Card WhatsApp (Destaque Especial - PRIMEIRO) -->
+                <a href="https://wa.me/5519983156264" target="_blank" rel="noopener noreferrer" class="social-premium-card whatsapp featured">
+                    <div class="social-premium-header">
+                        <div class="social-premium-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="social-premium-info">
+                            <h3>WhatsApp</h3>
+                            <span class="social-handle">(19) 98315-6264</span>
+                        </div>
+                        <div class="social-badge">Direto</div>
+                    </div>
+                    
+                    <div class="social-preview">
+                        <div class="preview-item">
+                            <i class="fas fa-comment"></i>
+                            <span>Resposta</span>
+                        </div>
+                        <div class="preview-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <span>Agendar</span>
+                        </div>
+                        <div class="preview-item">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Dúvidas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-action">
+                        <span>Chamar agora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="featured-tag">ATENDIMENTO</div>
+                </a>
+
                 <!-- Card Instagram -->
                 <a href="https://www.instagram.com/juannlucass" target="_blank" rel="noopener noreferrer" class="social-premium-card instagram">
                     <div class="social-premium-header">
@@ -283,17 +273,17 @@
                             <h3>Instagram</h3>
                             <span class="social-handle">@juannlucass</span>
                         </div>
-                        <div class="social-badge">+5k seguidores</div>
+                        <div class="social-badge">Siga-me</div>
                     </div>
                     
                     <div class="social-preview">
                         <div class="preview-item">
                             <i class="fas fa-image"></i>
-                            <span>Treinos diários</span>
+                            <span>Treinos</span>
                         </div>
                         <div class="preview-item">
                             <i class="fas fa-video"></i>
-                            <span>Reels de execução</span>
+                            <span>Reels</span>
                         </div>
                         <div class="preview-item">
                             <i class="fas fa-chart-line"></i>
@@ -301,23 +291,8 @@
                         </div>
                     </div>
                     
-                    <div class="social-stats">
-                        <div class="stat-item">
-                            <strong>200+</strong>
-                            <span>posts</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>15k</strong>
-                            <span>curtidas/mês</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>diário</strong>
-                            <span>conteúdo</span>
-                        </div>
-                    </div>
-                    
                     <div class="social-action">
-                        <span>Seguir no Instagram</span>
+                        <span>Acompanhar</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -332,13 +307,13 @@
                             <h3>TikTok</h3>
                             <span class="social-handle">@juannlucass</span>
                         </div>
-                        <div class="social-badge">+10k seguidores</div>
+                        <div class="social-badge">Siga-me</div>
                     </div>
                     
                     <div class="social-preview">
                         <div class="preview-item">
                             <i class="fas fa-music"></i>
-                            <span>Trends fitness</span>
+                            <span>Trends</span>
                         </div>
                         <div class="preview-item">
                             <i class="fas fa-play-circle"></i>
@@ -350,23 +325,8 @@
                         </div>
                     </div>
                     
-                    <div class="social-stats">
-                        <div class="stat-item">
-                            <strong>500k</strong>
-                            <span>visualizações</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>50+</strong>
-                            <span>vídeos</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>viral</strong>
-                            <span>conteúdo</span>
-                        </div>
-                    </div>
-                    
                     <div class="social-action">
-                        <span>Seguir no TikTok</span>
+                        <span>Acompanhar</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
                 </a>
@@ -381,17 +341,17 @@
                             <h3>YouTube</h3>
                             <span class="social-handle">@juannlucass</span>
                         </div>
-                        <div class="social-badge">+2k inscritos</div>
+                        <div class="social-badge">Inscreva-se</div>
                     </div>
                     
                     <div class="social-preview">
                         <div class="preview-item">
                             <i class="fas fa-clock"></i>
-                            <span>Treinos completos</span>
+                            <span>Treinos</span>
                         </div>
                         <div class="preview-item">
                             <i class="fas fa-book-open"></i>
-                            <span>Dicas avançadas</span>
+                            <span>Dicas</span>
                         </div>
                         <div class="preview-item">
                             <i class="fas fa-users"></i>
@@ -399,75 +359,10 @@
                         </div>
                     </div>
                     
-                    <div class="social-stats">
-                        <div class="stat-item">
-                            <strong>50+</strong>
-                            <span>vídeos</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>10h+</strong>
-                            <span>conteúdo</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>semanal</strong>
-                            <span>uploads</span>
-                        </div>
-                    </div>
-                    
                     <div class="social-action">
                         <span>Inscrever-se</span>
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </a>
-
-                <!-- Card WhatsApp (Destaque Especial) -->
-                <a href="https://wa.me/5519983156264" target="_blank" rel="noopener noreferrer" class="social-premium-card whatsapp featured">
-                    <div class="social-premium-header">
-                        <div class="social-premium-icon">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <div class="social-premium-info">
-                            <h3>WhatsApp</h3>
-                            <span class="social-handle">(19) 98315-6264</span>
-                        </div>
-                        <div class="social-badge">Atendimento</div>
-                    </div>
-                    
-                    <div class="social-preview">
-                        <div class="preview-item">
-                            <i class="fas fa-comment"></i>
-                            <span>Resposta rápida</span>
-                        </div>
-                        <div class="preview-item">
-                            <i class="fas fa-calendar-check"></i>
-                            <span>Agende avaliação</span>
-                        </div>
-                        <div class="preview-item">
-                            <i class="fas fa-question-circle"></i>
-                            <span>Tire dúvidas</span>
-                        </div>
-                    </div>
-                    
-                    <div class="social-stats">
-                        <div class="stat-item">
-                            <strong>24h</strong>
-                            <span>resposta</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>100%</strong>
-                            <span>atendimento</span>
-                        </div>
-                        <div class="stat-item">
-                            <strong>grátis</strong>
-                            <span>consulta</span>
-                        </div>
-                    </div>
-                    
-                    <div class="social-action">
-                        <span>Chamar no WhatsApp</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                    <div class="featured-tag">ATENDIMENTO PRIORITÁRIO</div>
                 </a>
             </div>
         </div>
@@ -590,3 +485,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
