@@ -1923,3 +1923,52 @@ body {
         gap: 15px;
     }
 }
+/* CORREÇÕES GERAIS DE VERMELHO - REMOVER SUJEIRA */
+.hero-subtitle,
+.section-subtitle,
+.text-red,
+.testimonial-rating i,
+.feature i,
+.service-icon i,
+.contact-item i,
+.social-links a:hover {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+.hero-subtitle,
+.section-subtitle {
+    color: #ef4444 !important;
+}
+
+.testimonial-rating i {
+    color: #ef4444 !important;
+}
+
+.service-icon i,
+.feature i,
+.contact-item i {
+    color: #ef4444 !important;
+}
+
+/* Gradientes apenas em elementos específicos que precisam */
+.btn-primary,
+.social-premium-icon,
+.whatsapp-float {
+    background: #ef4444 !important;
+    background: linear-gradient(135deg, #ef4444, #dc2626) !important;
+}
+
+/* Ajuste do glow para vermelho mais limpo */
+.glow-1 {
+    background: radial-gradient(circle at 40% 40%, rgba(239, 68, 68, 0.15), rgba(220, 38, 38, 0.05));
+}
+
+.glow-2 {
+    background: radial-gradient(circle at 60% 60%, rgba(239, 68, 68, 0.1), rgba(185, 28, 28, 0.03));
+}
+
+.glow-3 {
+    background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.08), rgba(127, 29, 29, 0.02));
+}
