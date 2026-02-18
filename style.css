@@ -2013,7 +2013,7 @@ body {
 
 /* RESPONSIVIDADE - IMAGEM DE FUNDO */
 @media (max-width: 768px) {
-    .hero::after {
+    .hero .hero-background {
         filter: blur(8px) brightness(0.3);
         opacity: 0.15;
     }
@@ -2021,12 +2021,10 @@ body {
     .hero-content h1 {
         font-size: 42px;
     }
-    
-    /* Outras regras mobile que já existem podem ficar aqui */
 }
 
 @media (max-width: 480px) {
-    .hero::after {
+    .hero .hero-background {
         filter: blur(6px) brightness(0.25);
         opacity: 0.12;
     }
