@@ -122,22 +122,36 @@ body {
     overflow: hidden;
 }
 
-/* Camada da imagem de fundo (bem sutil) */
-.hero::after {
+/* Hero Section - COM IMAGEM DE FUNDO SUTIL */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagem de fundo (CAMADA 1 - a mais atrás) */
+.hero .hero-background {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('img/hero-bg.jpg') center/cover no-repeat;
+    background: url('https://raw.githubusercontent.com/Lporsebom/PersonalTr/main/Landing%20Page/img/hero-bg.jpg') center/cover no-repeat;
     filter: blur(12px) brightness(0.35);
     opacity: 0.2;
-    z-index: 1;
+    z-index: 0;
     pointer-events: none;
 }
 
-/* Seu gradiente vermelho existente (mantido) */
+/* Gradiente vermelho animado (CAMADA 2) */
 .hero::before {
     content: '';
     position: absolute;
@@ -147,14 +161,15 @@ body {
     height: 200%;
     background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.08) 0%, transparent 60%);
     animation: gradientFlow 15s ease infinite;
-    z-index: 2;
+    z-index: 1;
 }
 
+/* Conteúdo do texto (CAMADA 3 - a mais na frente) */
 .hero-content {
     max-width: 800px;
     padding: 0 20px;
     position: relative;
-    z-index: 3; /* Acima de tudo */
+    z-index: 2;
 }
 
 .hero-subtitle {
@@ -1995,6 +2010,8 @@ body {
 .glow-3 {
     background: radial-gradient(circle at 50% 50%, rgba(239, 68, 68, 0.08), rgba(127, 29, 29, 0.02));
 }
+
+/* RESPONSIVIDADE - IMAGEM DE FUNDO */
 @media (max-width: 768px) {
     .hero::after {
         filter: blur(8px) brightness(0.3);
@@ -2004,6 +2021,8 @@ body {
     .hero-content h1 {
         font-size: 42px;
     }
+    
+    /* Outras regras mobile que já existem podem ficar aqui */
 }
 
 @media (max-width: 480px) {
